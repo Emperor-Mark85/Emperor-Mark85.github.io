@@ -1,0 +1,1114 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sharing, Communication and Cloud Computing for Working Professionals</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;700&display=swap">
+<style>
+/* Layout: sticky step list beside one working column; step list becomes a scrolling row on phones. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --ink:#1b2230; --muted:#5a6475; --line:#d9dee7;
+  --accent:#1f5f8b; --accent-ink:#ffffff; --accent-soft:#e3eef6;
+  --good:#1d7a4a; --good-soft:#e2f3ea; --bad:#b3372f; --bad-soft:#f9e6e4; --warn-soft:#fff3cf;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Atkinson Hyperlegible','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161d; --surface:#1a202a; --ink:#e8ecf2; --muted:#9aa4b5; --line:#2e3646;
+  --accent:#6fb4e3; --accent-ink:#0c1118; --accent-soft:#1d2d3b;
+  --good:#5fc98f; --good-soft:#173326; --bad:#f08a82; --bad-soft:#3a1d1b; --warn-soft:#3a3214; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161d; --surface:#1a202a; --ink:#e8ecf2; --muted:#9aa4b5; --line:#2e3646;
+  --accent:#6fb4e3; --accent-ink:#0c1118; --accent-soft:#1d2d3b;
+  --good:#5fc98f; --good-soft:#173326; --bad:#f08a82; --bad-soft:#3a1d1b; --warn-soft:#3a3214; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;
+  padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.2;text-wrap:balance;margin:0}
+h1{font-size:1.9rem} h2{font-size:1.45rem} h3{font-size:1.1rem}
+p{margin:0}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-block:20px 48px}
+.top{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between}
+.crumb{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin:12px 0 20px}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+.grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:820px){.grid{grid-template-columns:250px minmax(0,1fr);align-items:start}}
+nav ol{list-style:none;margin:0;padding:0;display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+@media(min-width:820px){nav ol{flex-direction:column;overflow:visible;position:sticky;top:12px}}
+nav button{display:flex;gap:10px;align-items:center;width:100%;min-width:170px;text-align:left;background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
+nav button[aria-current="step"]{border-color:var(--accent);background:var(--accent-soft)}
+nav button:disabled{opacity:.55;cursor:not-allowed}
+.dot{flex:none;width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.dot.ok{background:var(--good);border-color:var(--good);color:var(--surface)}
+nav small{display:block;color:var(--muted);font-size:.8rem}
+main{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(16px,3vw,28px);min-width:0;display:grid;gap:18px}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent);padding:3px 8px;border-radius:4px}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:11px 18px;font-weight:700;cursor:pointer}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.note{background:var(--accent-soft);border-radius:8px;padding:12px 14px}
+.box{border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:10px;min-width:0}
+.facts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.facts div{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.facts b{display:block;font-family:var(--display);font-size:1.25rem}
+.facts span{color:var(--muted);font-size:.85rem}
+table{border-collapse:collapse;width:100%}
+td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+.scroll{overflow-x:auto}
+/* mock document */
+.doc{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;font-size:.98rem}
+.ins{background:var(--good-soft);color:var(--good);text-decoration:underline}
+.del{background:var(--bad-soft);color:var(--bad);text-decoration:line-through}
+.hl{background:var(--warn-soft)}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:4px 9px;font-size:.88rem;margin:3px}
+.stage{background:var(--bg);border:1px solid var(--line);border-radius:10px;min-height:190px;padding:16px;display:grid;align-content:center;justify-items:center;gap:10px;text-align:center}
+.cap{background:#10151c;color:#fff;border-radius:6px;padding:8px 12px;font-size:1rem;text-align:center}
+.opt{display:block;width:100%;text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:8px;padding:11px 14px;cursor:pointer;margin-top:8px}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt.right{border-color:var(--good);background:var(--good-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.fb{border-radius:8px;padding:11px 14px;margin-top:10px}
+.fb.ok{background:var(--good-soft)} .fb.no{background:var(--bad-soft)}
+textarea,input[type=text],input[type=url],input[type=number],input[type=password],select{width:100%;background:var(--surface);border:2px solid var(--line);border-radius:8px;padding:10px}
+input[type=file]{padding:6px 0;width:100%}
+.post{border-left:4px solid var(--line);padding:4px 0 4px 12px;display:grid;gap:4px}
+.meta{color:var(--muted);font-size:.85rem}
+.pill{font-size:.75rem;font-weight:700;border-radius:99px;padding:2px 8px;background:var(--line);color:var(--muted)}
+.pill.g{background:var(--good-soft);color:var(--good)} .pill.b{background:var(--bad-soft);color:var(--bad)}
+label.chk{display:flex;gap:10px;align-items:flex-start}
+input[type=checkbox]{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--accent)}
+footer{margin-top:18px;color:var(--muted);font-size:.85rem}
+.switch{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--muted)}
+.loginpage{min-height:100vh;display:grid;place-items:center;padding-block:24px}
+.logincard{width:100%;max-width:440px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,4vw,28px);display:grid;gap:12px}
+code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+/* lecturer console */
+.lecnav{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+.lecnav button{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 14px;
+  cursor:pointer;white-space:nowrap;font-weight:700;color:var(--muted)}
+.lecnav button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.lecnav button:hover:not(.on){border-color:var(--accent);color:var(--accent)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<!-- ============================ LOGIN ============================ -->
+<div class="loginpage" id="login">
+  <form class="logincard" id="lf" autocomplete="on">
+    <span class="tag">IT 404 · Accra Institute of Technology</span>
+    <h1>Sign in</h1>
+    <p class="meta">Sharing, Communication and Cloud Computing for Working Professionals</p>
+    <label for="u"><b>Username</b></label><input id="u" name="username" type="text" autocomplete="username" required>
+    <label for="p"><b>Password</b></label><input id="p" name="password" type="password" autocomplete="current-password" required>
+    <div class="fb no" id="lerr" role="alert" hidden></div>
+    <button class="btn" type="submit">Sign in</button>
+    <div class="note">
+      <b>Demonstration accounts</b><br>
+      Lecturer: <code>lecturer</code> / <code>IT404-Review</code><br>
+      Learner: <code>learner1</code> / <code>Learn-2026</code>
+    </div>
+    <p class="meta">Forgot your password? Message the course support line: [WhatsApp number] or [support email].</p>
+    <p class="meta">This sign-in is a demonstration for the prototype and is not secure. Never reuse a real password here.</p>
+  </form>
+</div>
+
+<!-- ============================ LEARNER ============================ -->
+<div class="wrap" id="app" hidden>
+  <div class="top">
+    <div><div class="crumb">Sharing, Communication and Cloud Computing for Working Professionals</div><h1>Professional Digital Collaboration</h1></div>
+    <div class="row">
+      <span class="meta" id="who"></span>
+      <button class="btn alt" id="out" type="button" style="padding:4px 12px">Sign out</button>
+    </div>
+  </div>
+  <div class="bar" role="progressbar" aria-label="Module progress" aria-valuemin="0" aria-valuemax="100" id="pb"><i id="pbi"></i></div>
+  <div class="grid">
+    <nav aria-label="Module steps"><ol id="nav"></ol></nav>
+    <main id="main" aria-live="polite"></main>
+  </div>
+  <footer>Prototype module for IT 404, Accra Institute of Technology. All names and files shown are sample data. Support: [support email] · [WhatsApp number]</footer>
+</div>
+
+<!-- ============================ LECTURER ============================ -->
+<div class="wrap" id="lec" hidden>
+  <div class="top">
+    <div><div class="crumb">IT 404 · Lecturer console</div><h1>Professional Digital Collaboration</h1></div>
+    <div class="row">
+      <button class="btn alt" id="lecpreview" type="button" style="padding:4px 12px">Preview learner module</button>
+      <span class="meta" id="lecwho"></span>
+      <button class="btn alt" id="lecout" type="button" style="padding:4px 12px">Sign out</button>
+    </div>
+  </div>
+  <div class="lecnav" id="lecnav" role="tablist" aria-label="Lecturer sections"></div>
+  <main id="lecmain" aria-live="polite"></main>
+  <footer>Prototype lecturer console. Data is stored in this browser only. Support: [support email] · [WhatsApp number]</footer>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* =============================================================
+   0. Helpers
+   ============================================================= */
+function $(s){return document.querySelector(s)}
+function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function uid(){return 'x'+Math.random().toString(36).slice(2,9)}
+function pad(n){return (n<10?'0':'')+n}
+function nowStr(){var d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes())}
+function today(){return nowStr().slice(0,10)}
+
+/* =============================================================
+   1. Shared prototype database (one record, both interfaces)
+   ============================================================= */
+var DBKEY='mod2db';
+
+function newDB(){
+  return {
+    materials:[
+      {id:'m1',title:'Module guide: Sharing, communication and cloud computing',type:'Slides',
+       url:'https://example.org/it404/week2-slides.pdf',
+       note:'Practical guide to sharing files safely, communicating clearly online, and using cloud services at work.',file:'',visible:true,added:'2026-10-12'},
+      {id:'m2',title:'Video: Cloud collaboration at work',type:'Video',
+       url:'https://example.org/it404/coauthor.mp4',
+       note:'Captions on. A low-data audio version sits in the shared folder.',file:'',visible:true,added:'2026-10-12'}
+    ],
+    learners:[
+      {u:'learner1',name:'Ama Owusu',progress:0,best:null,attempts:0},
+      {u:'kofi',name:'Kofi Boateng',progress:5,best:8,attempts:1},
+      {u:'efua',name:'Efua Adjei',progress:6,best:9,attempts:2},
+      {u:'yaw',name:'Yaw Darko',progress:3,best:null,attempts:0}
+    ],
+    subs:[
+      {id:'s1',u:'kofi',name:'Kofi Boateng',kind:'Group task',link:'https://docs.example.com/group-3',
+       at:'2026-10-14 09:12',status:'pending',mark:null,fb:'',score:null},
+      {id:'s2',u:'efua',name:'Efua Adjei',kind:'Group task',link:'https://docs.example.com/group-1',
+       at:'2026-10-14 11:40',status:'pending',mark:null,fb:'',score:null},
+      {id:'s3',u:'efua',name:'Efua Adjei',kind:'Quiz',link:'',
+       at:'2026-10-14 10:05',status:'graded',mark:90,fb:'Excellent work. Look again at question 7 on attachment risk.',score:9}
+    ]
+  };
+}
+
+var DB;
+try{var _raw=localStorage.getItem(DBKEY);DB=_raw?JSON.parse(_raw):null}catch(e){DB=null}
+if(!DB||typeof DB!=='object')DB=newDB();
+['materials','learners','subs'].forEach(function(k){if(!Array.isArray(DB[k]))DB[k]=[]});
+function saveDB(){try{localStorage.setItem(DBKEY,JSON.stringify(DB))}catch(e){}}
+
+/* =============================================================
+   2. Accounts and roles
+   ============================================================= */
+var ACCTS={
+  lecturer:{pw:'IT404-Review',role:'lecturer',name:'Dr. Mensah'},
+  learner1:{pw:'Learn-2026',role:'learner',name:'Ama Owusu'}
+};
+
+var CURUSER=null;
+var PREVIEW=false;
+
+/* =============================================================
+   3. Learner state (kept per user, so two learners do not clash)
+   ============================================================= */
+function blankState(){
+  return {cur:0,done:{},best:null,attempts:0,posts:null,reflection:'',link:''};
+}
+function stateKey(u){return 'mod2:'+u}
+function loadState(u){
+  var s=blankState();
+  try{var raw=localStorage.getItem(stateKey(u));
+    if(raw){var o=JSON.parse(raw);for(var k in o)s[k]=o[k]}}catch(e){}
+  return s;
+}
+var S=blankState();
+function save(){
+  if(PREVIEW||!CURUSER)return;
+  try{localStorage.setItem(stateKey(CURUSER),JSON.stringify(S))}catch(e){}
+}
+
+/* =============================================================
+   4. Module structure
+   ============================================================= */
+var STEPS=[
+ {id:'welcome',t:'Welcome',m:'3 min'},
+ {id:'l1',t:'Lesson 2.1: Sharing files at work',m:'6 min'},
+ {id:'l2',t:'Lesson 2.2: Comments, suggestions, history',m:'15 min'},
+ {id:'forum',t:'Forum: Sharing and communication at work',m:'15 min'},
+ {id:'task',t:'Group task',m:'40 min'},
+ {id:'quiz',t:'Module quiz',m:'15 min'},
+ {id:'wrap',t:'Reflection and help',m:'5 min'}];
+
+function unlocked(i){return PREVIEW||i===0||!!S.done[STEPS[i-1].id]}
+
+/* =============================================================
+   5. Bridge: learner activity -> shared database
+   ============================================================= */
+function isLearner(){var a=ACCTS[CURUSER];return !!(a&&a.role==='learner')}
+
+function syncLearner(){
+  if(PREVIEW||!isLearner())return;
+  var a=ACCTS[CURUSER];
+  var rec=DB.learners.filter(function(l){return l.u===CURUSER})[0];
+  if(!rec){rec={u:CURUSER,name:a.name,progress:0,best:null,attempts:0};DB.learners.push(rec)}
+  rec.name=a.name;
+  rec.progress=Object.keys(S.done).length;
+  rec.best=S.best;
+  rec.attempts=S.attempts;
+  saveDB();
+}
+
+function recordQuiz(score){
+  if(PREVIEW||!isLearner())return;
+  var a=ACCTS[CURUSER];
+  var ex=DB.subs.filter(function(s){return s.u===CURUSER&&s.kind==='Quiz'})[0];
+  if(ex){ex.score=score;ex.at=nowStr();ex.status='pending';ex.mark=null;ex.fb='';ex.name=a.name}
+  else DB.subs.push({id:uid(),u:CURUSER,name:a.name,kind:'Quiz',link:'',at:nowStr(),
+    status:'pending',mark:null,fb:'',score:score});
+  saveDB();
+}
+
+function recordTask(link){
+  if(PREVIEW||!isLearner())return;
+  var a=ACCTS[CURUSER];
+  var ex=DB.subs.filter(function(s){return s.u===CURUSER&&s.kind==='Group task'})[0];
+  if(ex){ex.link=link;ex.at=nowStr();ex.status='pending';ex.mark=null;ex.fb='';ex.name=a.name}
+  else DB.subs.push({id:uid(),u:CURUSER,name:a.name,kind:'Group task',link:link,
+    at:nowStr(),status:'pending',mark:null,fb:'',score:null});
+  saveDB();
+}
+
+/* =============================================================
+   6. Learner shell
+   ============================================================= */
+function drawNav(){
+  var n=$('#nav');n.innerHTML='';var d=0;
+  STEPS.forEach(function(s,i){
+    if(S.done[s.id])d++;
+    var li=el('li'),b=el('button');b.type='button';b.disabled=!unlocked(i);
+    if(i===S.cur)b.setAttribute('aria-current','step');
+    b.innerHTML='<span class="dot'+(S.done[s.id]?' ok':'')+'">'+
+      (S.done[s.id]?'&#10003;':(unlocked(i)?(i+1):'&#128274;'))+
+      '</span><span>'+esc(s.t)+'<small>'+esc(s.m)+(unlocked(i)?'':' · opens after previous step')+'</small></span>';
+    b.onclick=function(){go(i)};li.appendChild(b);n.appendChild(li);
+  });
+  var p=Math.round(d/STEPS.length*100);
+  $('#pbi').style.width=p+'%';$('#pb').setAttribute('aria-valuenow',p);
+}
+
+function go(i){
+  S.cur=i;save();drawNav();
+  var m=$('#main');m.innerHTML='';R[STEPS[i].id](m);window.scrollTo(0,0);
+}
+
+function nextBtn(m,label){
+  var r=el('div','row');
+  var b=el('button','btn',label||'Continue');b.type='button';
+  b.onclick=function(){go(Math.min(S.cur+1,STEPS.length-1))};
+  r.appendChild(b);m.appendChild(r);return b;
+}
+
+function finish(id){
+  if(!PREVIEW){S.done[id]=true;save();syncLearner();}
+  drawNav();
+}
+
+function showApp(u,preview){
+  CURUSER=u;PREVIEW=!!preview;
+  S=preview?blankState():loadState(u);
+  $('#login').hidden=true;$('#lec').hidden=true;$('#app').hidden=false;
+  $('#who').textContent=preview?'Preview mode — nothing is saved':'Signed in as '+ACCTS[u].name+' (learner)';
+  $('#out').textContent=preview?'Back to console':'Sign out';
+  drawNav();go(preview?0:Math.min(S.cur,STEPS.length-1));
+}
+
+/* =============================================================
+   7. Reusable quiz engine
+   ============================================================= */
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+
+function quiz(host,qs,cfg){
+  var idx=0,score=0,order;
+  function show(){
+    host.innerHTML='';var q=qs[idx];
+    order=shuffle(q.o.map(function(t,i){return{t:t,ok:i===q.a}}));
+    host.appendChild(el('div','meta','Question '+(idx+1)+' of '+qs.length));
+    host.appendChild(el('h3',null,esc(q.q)));
+    var fb=el('div'),nx=el('div','row');var answered=false;
+    order.forEach(function(op){
+      var b=el('button','opt',esc(op.t));b.type='button';
+      b.onclick=function(){
+        if(answered)return;answered=true;
+        host.querySelectorAll('.opt').forEach(function(x,i){x.disabled=true;if(order[i].ok)x.classList.add('right')});
+        if(op.ok){score++;fb.className='fb ok';fb.innerHTML='<b>Correct.</b> '+esc(q.f)}
+        else{b.classList.add('wrong');fb.className='fb no';fb.innerHTML='<b>Not quite.</b> '+esc(q.w||q.f)}
+        var n=el('button','btn',idx<qs.length-1?'Next question':'See result');n.type='button';
+        n.onclick=function(){idx++;if(idx<qs.length)show();else cfg.done(score)};nx.appendChild(n);n.focus();
+      };host.appendChild(b);
+    });
+    host.appendChild(fb);host.appendChild(nx);
+  }
+  show();
+}
+
+/* =============================================================
+   8. Learner step renderers
+   ============================================================= */
+var R={};
+
+/* -- materials block shared by several learner steps -- */
+function materialsBlock(){
+  var box=el('div','box');
+  box.appendChild(el('h3',null,'Course materials'));
+  var vis=DB.materials.filter(function(m){return m.visible});
+  if(!vis.length){box.appendChild(el('p','meta','No materials published yet. Check back soon.'));return box}
+  var t=el('div');t.style.display='grid';t.style.gap='10px';
+  vis.forEach(function(m){
+    var r=el('div');
+    r.style.borderLeft='3px solid var(--accent)';r.style.paddingLeft='10px';
+    var h=el('div');h.innerHTML='<b>'+esc(m.title)+'</b> <span class="pill">'+esc(m.type)+'</span>';
+    r.appendChild(h);
+    if(m.note)r.appendChild(el('div','meta',esc(m.note)));
+    var bits=[];
+    if(m.url)bits.push('<a href="'+esc(m.url)+'" target="_blank" rel="noopener">Open resource</a>');
+    if(m.file)bits.push('Attached file: '+esc(m.file));
+    if(m.added)bits.push('Added '+esc(m.added));
+    if(bits.length)r.appendChild(el('div','meta',bits.join(' · ')));
+    t.appendChild(r);
+  });
+  box.appendChild(t);
+  return box;
+}
+
+R.welcome=function(m){
+  m.appendChild(el('span','tag','Objective O2'));
+  m.appendChild(el('h2',null,'By the end of this module, you can share work files safely, communicate professionally online, and explain how cloud computing supports a modern workplace'));
+  m.appendChild(el('p',null,'You will practise choosing sharing permissions, writing clear workplace messages, collaborating through cloud documents, and identifying benefits and risks of cloud computing.'));
+  m.appendChild(el('div','facts','<div><b>about 100 min</b><span>total, in short parts</span></div><div><b>7 steps</b><span>video, guide, forum, task, quiz</span></div><div><b>70%</b><span>pass mark on the quiz</span></div><div><b>2 attempts</b><span>on the quiz</span></div>'));
+  m.appendChild(el('div','box','<h3>This week</h3><table><tbody><tr><td>Lesson 2.1</td><td>Sharing files and access permissions</td></tr><tr><td>Lesson 2.2</td><td>Professional communication and cloud tools</td></tr><tr><td>Forum</td><td>Share one real example of version chaos</td></tr><tr><td>Group task</td><td>Work together using cloud tools in a group of 3</td></tr><tr><td>Quiz</td><td>10 questions with instant feedback</td></tr></tbody></table>'));
+  m.appendChild(materialsBlock());
+  m.appendChild(el('div','note','<b>Need help?</b> Reply to the course WhatsApp group, or email [support email]. The facilitator replies within 24 hours. Videos have captions and every lesson has a text version you can read with little data.'));
+  var b=el('button','btn','Start Lesson 2.1');b.type='button';
+  b.onclick=function(){finish('welcome');go(1)};m.appendChild(b);
+};
+
+var SCENES=[
+ {c:'Monday: Ama needs to share a project budget with her team.',h:'<span class="chip">&#128196; Budget_v1.docx</span><div>&#9993; &rarr; Kofi, Efua, Yaw</div>'},
+ {c:'Colleagues download separate copies and send different versions back.',h:'<span class="chip">Budget_v2_Kofi.docx</span><span class="chip">Budget_v2_Efua.docx</span><span class="chip">Budget_v2_final.docx</span><span class="chip">Budget_v2_final_REAL.docx</span>'},
+ {c:'Ama must compare versions manually and risks missing important updates.',h:'<div class="del">Which total is correct?</div><div class="meta">4 files &middot; 3 different totals</div>'},
+ {c:'Ama stores the file in an approved cloud workspace and gives teammates the access they need.',h:'<span class="chip">&#128196; Budget (shared)</span><div><span class="pill g">Kofi</span> <span class="pill">Efua</span> <span class="pill b">Yaw</span> editing now</div>'},
+ {c:'The team can view updates, discuss changes, and use version history to recover earlier work.',h:'<div class="doc">Total: <span class="del">GHS 12,400</span> <span class="ins">GHS 12,950</span></div><div class="meta">Efua &middot; 10:42 &middot; see Using internet-based services such as online storage and software</div>'}];
+
+R.l1=function(m){
+  m.appendChild(el('span','tag','Lesson 2.1'));
+  m.appendChild(el('h2',null,'Sharing files at work'));
+  m.appendChild(el('p',null,'Explore workplace examples of sharing files and keeping colleagues informed. Use the buttons to move through the scenarios.'));
+  var stage=el('div','stage'),cap=el('div','cap'),i=0,timer=null;
+  function draw(){stage.innerHTML=SCENES[i].h;cap.textContent=SCENES[i].c;ct.textContent='Scene '+(i+1)+' of '+SCENES.length}
+  var ct=el('span','meta');
+  var ctl=el('div','row');
+  function mk(t,f,alt){var b=el('button','btn'+(alt?' alt':''),t);b.type='button';b.onclick=f;ctl.appendChild(b);return b}
+  var play=mk('Play',function(){
+    if(timer){clearInterval(timer);timer=null;play.textContent='Play';return}
+    play.textContent='Pause';
+    timer=setInterval(function(){
+      if(i<SCENES.length-1){i++;draw()}
+      else{clearInterval(timer);timer=null;play.textContent='Replay';i=-1}
+    },4000);
+  });
+  mk('Previous',function(){i=Math.max(0,i-1);draw()},true);
+  mk('Next',function(){i=Math.min(SCENES.length-1,i+1);draw()},true);
+  ctl.appendChild(ct);
+  m.appendChild(stage);m.appendChild(cap);m.appendChild(ctl);draw();
+  var det=el('details','box','<summary><b>Read the transcript (low data)</b></summary>'+
+    SCENES.map(function(s,k){return '<p>'+(k+1)+'. '+esc(s.c)+'</p>'}).join(''));m.appendChild(det);
+  m.appendChild(el('h3',null,'Check yourself'));
+  var host=el('div','box');m.appendChild(host);
+  quiz(host,[
+   {q:'Four people each edit their own emailed copy. What is the main problem?',
+    o:['The emails are too long','Nobody knows which version has all the changes','The file gets smaller','Passwords expire'],a:1,
+    f:'Separate copies create conflicting versions that someone must merge by hand.'},
+   {q:'In a shared file, who sees the latest changes?',
+    o:['Only the owner','Only people who ask for them','Everyone with access, as they happen','Nobody until Friday'],a:2,
+    f:'One shared file means one current version for everyone with access.'}
+  ],{done:function(s){
+    host.innerHTML='<div class="fb ok"><b>Self-check complete:</b> '+s+' of 2 correct. This does not affect your grade.</div>';
+    finish('l1');nextBtn(m,'Continue to Lesson 2.2');
+  }});
+};
+
+R.l2=function(m){
+  m.appendChild(el('span','tag','Lesson 2.2'));
+  m.appendChild(el('h2',null,'Communicate clearly and collaborate in the cloud'));
+  m.appendChild(el('p',null,'Professional teams need clear messages, sensible file permissions and reliable cloud tools. These examples show practical habits for Google Drive, Microsoft OneDrive, Teams or other approved workplace platforms.'));
+  var blocks=[
+   ['1. Share files with the right permissions','Choose permissions based on each recipient’s role: viewer to read, commenter to give feedback, and editor to make changes. Avoid public edit links for confidential work.',
+    ['Select the text.','Choose Add comment (or press Ctrl+Alt+M).','Type your note and press Comment.','When it is dealt with, press Resolve.'],
+    '<div class="doc">The final budget is due <span class="hl">next Wednesday</span>.</div><div class="box"><b>Efua</b> <span class="meta">10:12</span><div>Is this the 21st or the 28th?</div><div class="row"><span class="pill">Reply</span><span class="pill g">Resolve</span></div></div>'],
+   ['2. Communicate with clarity','Use a clear subject, state the action required, include a deadline when relevant, and keep messages respectful. Choose email for formal records, chat for quick coordination, and a meeting for complex discussion.',
+    ['Switch the mode from Editing to Suggesting (top right).','Type or delete as normal. Your change appears in colour.','The owner presses the tick to accept or the cross to reject.'],
+    '<div class="doc">Send the file <span class="del">by email</span> <span class="ins">through the shared folder</span> before Friday.</div><div class="row"><span class="pill g">&#10003; Accept</span><span class="pill b">&#10005; Reject</span></div>'],
+   ['3. Understand cloud computing','Cloud computing provides storage, software and processing over the internet. It helps authorised staff access work remotely and collaborate in real time. Use approved services and follow workplace security rules.',
+    ['Open File, then Using internet-based services such as online storage and software, then See version history.','Pick a version to preview it.','Press Restore this version if you need it back.','Use Name current version to label a final copy.'],
+    '<table><tbody><tr><td>Today 10:42</td><td>Efua</td><td><span class="pill">Current</span></td></tr><tr><td>Today 09:15</td><td>Kofi</td><td><span class="pill">Restore</span></td></tr><tr><td>Yesterday</td><td>Ama</td><td><span class="pill">Restore</span></td></tr></tbody></table>']];
+  blocks.forEach(function(b){
+    var bx=el('div','box');bx.appendChild(el('h3',null,b[0]));bx.appendChild(el('p',null,b[1]));
+    bx.appendChild(el('ol',null,b[2].map(function(s){return '<li>'+esc(s)+'</li>'}).join('')));
+    var ill=el('div');ill.style.display='grid';ill.style.gap='8px';ill.innerHTML=b[3];
+    ill.setAttribute('role','img');ill.setAttribute('aria-label','Example of '+b[0].slice(3).toLowerCase());
+    bx.appendChild(ill);m.appendChild(bx);
+  });
+  m.appendChild(el('details','box','<summary><b>One-page job aid (keep this)</b></summary><ul><li>Question or discussion: <b>Comment</b>, then Resolve.</li><li>Proposed change: <b>Suggesting</b> mode, then Accept or Reject.</li><li>Need an old copy: <b>Using internet-based services such as online storage and software</b>, then Restore.</li><li>Name the final file clearly: Meeting_Notes_2026-10-20_v2.</li><li>Give people the lowest permission they need.</li></ul>'));
+  m.appendChild(el('h3',null,'Check yourself'));
+  var host=el('div','box');m.appendChild(host);
+  quiz(host,[
+   {q:'Which mode shows edits that others can accept or reject?',o:['Viewing','Suggesting','Printing','Locked'],a:1,f:'Suggesting mode tracks each proposed change.'},
+   {q:'Where do you go to restore an earlier copy of the file?',o:['Spell check','Page setup','Using internet-based services such as online storage and software','Word count'],a:2,f:'Using internet-based services such as online storage and software lists earlier versions and lets you restore one.'}
+  ],{done:function(s){
+    host.innerHTML='<div class="fb ok"><b>Self-check complete:</b> '+s+' of 2 correct.</div>';
+    finish('l2');nextBtn(m,'Continue to the forum');
+  }});
+};
+
+/* ---------- forum ---------- */
+var SEED=[
+ {n:'Sample: Ama (Admin Officer)',x:'Our leave schedule had five copies in five inboxes. Two people were booked off on the same day. A single shared sheet with comments would have caught it.',r:[]},
+ {n:'Sample: Kofi (Supervisor)',x:'I rewrote part of a report and my colleague had edited the same part offline. We lost an hour comparing. Suggesting mode would have shown both edits.',r:['Sample: Efua: Using internet-based services such as online storage and software could also show who changed the paragraph.']}];
+
+R.forum=function(m){
+  if(!S.posts)S.posts=[];
+  m.appendChild(el('span','tag','Forum'));
+  m.appendChild(el('h2',null,'Sharing and communication at work'));
+  m.appendChild(el('p',null,'Describe a workplace situation where file sharing, unclear communication or cloud tools could help a team. Explain one risk and one good practice, then reply constructively to a colleague. Do not include confidential information.'));
+  m.appendChild(el('div','meta','Post by Day 3 · reply by Day 5 · the facilitator replies within 24 hours'));
+  var list=el('div','box');m.appendChild(list);
+
+  function draw(){
+    list.innerHTML='';var all=SEED.concat(S.posts||[]);
+    all.forEach(function(p,i){
+      var d=el('div','post');var b=el('b');b.textContent=p.n;d.appendChild(b);
+      var t=el('div');t.textContent=p.x;d.appendChild(t);
+      (p.r||[]).forEach(function(r){var q=el('div','meta');q.textContent='Reply: '+r;d.appendChild(q)});
+      var rb=el('button','btn alt','Reply');rb.type='button';rb.style.justifySelf='start';rb.style.padding='4px 12px';
+      rb.onclick=function(){
+        if(d.querySelector('.rf'))return;
+        var f=el('div','rf');f.style.display='grid';f.style.gap='8px';
+        var ta=el('textarea');ta.rows=2;ta.setAttribute('aria-label','Your reply');
+        var go2=el('button','btn','Send reply');go2.type='button';go2.style.justifySelf='start';
+        go2.onclick=function(){
+          var v=ta.value.trim();if(!v)return;
+          if(i<SEED.length){SEED[i].r.push('You: '+v)}
+          else{S.posts[i-SEED.length].r.push('You: '+v)}
+          S.replied=true;save();draw();check();
+        };
+        f.appendChild(ta);f.appendChild(go2);d.appendChild(f);ta.focus();
+      };
+      d.appendChild(rb);list.appendChild(d);
+    });
+  }
+  draw();
+
+  var f=el('div','box');
+  var lbl=el('label');lbl.setAttribute('for','np');lbl.innerHTML='<b>Your post</b>';f.appendChild(lbl);
+  var ta=el('textarea');ta.id='np';ta.rows=4;f.appendChild(ta);
+  var pb=el('button','btn','Post');pb.type='button';pb.style.justifySelf='start';
+  var st=el('div','meta');
+  pb.onclick=function(){
+    var v=ta.value.trim();
+    if(v.length<20){st.textContent='Write at least a couple of sentences.';return}
+    S.posts.push({n:'You',x:v,r:[]});S.posted=true;ta.value='';st.textContent='';save();draw();check();
+  };
+  f.appendChild(pb);f.appendChild(st);m.appendChild(f);
+
+  var prog=el('div','note');m.appendChild(prog);var nb=null;
+  function check(){
+    var a=!!S.posted,b=!!S.replied;
+    prog.innerHTML='<b>To finish this step:</b> '+(a?'&#10003;':'&#9744;')+' post your example &nbsp; '+
+      (b?'&#10003;':'&#9744;')+' reply to one colleague';
+    if(a&&b&&!S.done.forum){finish('forum');if(!nb)nb=nextBtn(m,'Continue to the group task')}
+  }
+  check();
+  if(S.done.forum&&!nb)nextBtn(m,'Continue to the group task');
+};
+
+/* ---------- group task ---------- */
+var ED=[
+ {b:'Send the file by email before Friday.',a:'Send the file through the shared folder before Friday.'},
+ {b:'Each person keeps a personal copy.',a:'Each person edits the shared copy.'},
+ {b:'Final totals are checked by Ama only.',a:'Final totals are checked by two people.'}];
+
+R.task=function(m){
+  m.appendChild(el('span','tag','Group task · Objective O2'));
+  m.appendChild(el('h2',null,'Work together using cloud tools'));
+  m.appendChild(el('p',null,'Part A is a short practice activity. Part B is a group task for three working professionals: plan how to share a file, communicate changes and use a cloud service securely.'));
+
+  var P={sug:{},cm:{},ver:false};
+  var a=el('div','box');m.appendChild(a);
+  var vers=[{w:'Today 10:42',n:'Efua',cur:true},{w:'Today 09:15',n:'Kofi'},{w:'Yesterday 16:30',n:'Ama'}];
+
+  function drawA(){
+    a.innerHTML='<h3>Part A: Practise safe sharing and clear communication</h3>';
+    a.appendChild(el('p','meta','1. Accept or reject each suggestion.'));
+    ED.forEach(function(e,i){
+      var r=el('div','doc');
+      r.innerHTML='<span class="del">'+esc(e.b)+'</span> <span class="ins">'+esc(e.a)+'</span> ';
+      var s=P.sug[i];
+      if(s){r.appendChild(el('span','pill '+(s==='a'?'g':'b'),s==='a'?'Accepted':'Rejected'))}
+      else{
+        var ac=el('button','btn','Accept');ac.type='button';ac.style.padding='3px 10px';
+        ac.onclick=function(){P.sug[i]='a';drawA();chk()};
+        var rj=el('button','btn alt','Reject');rj.type='button';rj.style.padding='1px 10px';
+        rj.onclick=function(){P.sug[i]='r';drawA();chk()};
+        var w=el('div','row');w.style.marginTop='8px';w.appendChild(ac);w.appendChild(rj);r.appendChild(w);
+      }
+      a.appendChild(r);
+    });
+    a.appendChild(el('p','meta','2. Resolve both comments.'));
+    [['Kofi','Can we add the meeting room?'],['Yaw','Is Friday the deadline for everyone?']].forEach(function(c,i){
+      var r=el('div','doc');r.innerHTML='<b>'+esc(c[0])+':</b> '+esc(c[1])+' ';
+      if(P.cm[i])r.appendChild(el('span','pill g','Resolved'));
+      else{
+        var b=el('button','btn alt','Resolve');b.type='button';b.style.padding='1px 10px';
+        b.onclick=function(){P.cm[i]=1;drawA();chk()};r.appendChild(b);
+      }
+      a.appendChild(r);
+    });
+    a.appendChild(el('p','meta','3. Open Using internet-based services such as online storage and software and restore the version from Yesterday, then name the final version.'));
+    var t=el('div','doc');
+    vers.forEach(function(v,i){
+      var r=el('div','row');r.innerHTML='<span>'+esc(v.w)+' · '+esc(v.n)+'</span>';
+      if(i>0&&!P.ver){
+        var b=el('button','btn alt','Restore');b.type='button';b.style.padding='1px 10px';
+        b.onclick=function(){P.ver=true;drawA();chk()};r.appendChild(b);
+      }
+      if(P.ver&&i===2)r.appendChild(el('span','pill g','Restored'));
+      t.appendChild(r);
+    });
+    a.appendChild(t);
+  }
+
+  var gate=el('div','note');
+  function aDone(){return Object.keys(P.sug).length===3&&Object.keys(P.cm).length===2&&P.ver}
+  function chk(){
+    gate.innerHTML=aDone()
+      ? '<b>&#10003; Part A complete.</b> You can submit Part B.'
+      : '<b>Part A not finished yet.</b> Complete all three practice items.';
+    sub.disabled=!aDone()||!lk.value.trim();
+  }
+  drawA();
+
+  var b=el('div','box');
+  b.innerHTML='<h3>Part B: Workplace cloud collaboration task (40 minutes)</h3><p>In groups of 3, create a short project update in an approved cloud document and:</p>'+
+    '<label class="chk"><input type="checkbox"><span>Each member adds one useful project update to the shared cloud document.</span></label>'+
+    '<label class="chk"><input type="checkbox"><span>Each member leaves at least <b>two comments</b> on another member\'s text.</span></label>'+
+    '<label class="chk"><input type="checkbox"><span>Respond to questions and agree on the next action, owner and deadline.</span></label>'+
+    '<label class="chk"><input type="checkbox"><span>Use version history and give the file a clear, dated name.</span></label>'+
+    '<label class="chk"><input type="checkbox"><span>Share the link with the facilitator using <b>view-only access</b>.</span></label>';
+  m.appendChild(b);
+
+  m.appendChild(el('details','box','<summary><b>Marking rubric (10 marks)</b></summary><table><tbody><tr><td>Suggestions used</td><td>3</td></tr><tr><td>Comments used and resolved</td><td>3</td></tr><tr><td>Using internet-based services such as online storage and software used correctly</td><td>2</td></tr><tr><td>Every member contributed</td><td>2</td></tr></tbody></table>'));
+
+  var sf=el('div','box');
+  var lk=el('input');lk.type='url';lk.id='lk';
+  lk.placeholder='https://docs.example.com/your-group-document';lk.value=S.link||'';
+  lk.oninput=chk;
+  var ll=el('label');ll.setAttribute('for','lk');ll.innerHTML='<b>Submit your group\'s document link</b>';
+  sf.appendChild(ll);sf.appendChild(lk);
+  var sub=el('button','btn','Submit task');sub.type='button';sub.style.justifySelf='start';
+  var msg=el('div','meta');
+  sub.onclick=function(){
+    S.link=lk.value.trim();save();
+    recordTask(S.link);
+    finish('task');
+    msg.textContent='Submitted. Your facilitator will review it and return a mark and feedback.';
+    nextBtn(m,'Continue to the quiz');
+  };
+  sf.appendChild(sub);sf.appendChild(msg);
+  m.appendChild(gate);m.appendChild(sf);chk();
+
+  if(S.done.task){
+    msg.textContent='Submitted. Your facilitator will review it and return a mark and feedback.';
+    nextBtn(m,'Continue to the quiz');
+  }
+};
+
+/* ---------- module quiz ---------- */
+var QS=[
+ {q:'What is a key benefit of storing a work file in an approved cloud workspace?',
+  o:['Authorised colleagues can access the current file from different locations','Authorised colleagues can access the current file from different locations','Only one person can edit at once','The file cannot be changed later'],a:1,
+  f:'Cloud access helps teams work from one current file and reduces duplicate copies.',w:'Co-authoring means working on a single shared file, so there is no need to merge copies.'},
+ {q:'Which sharing permission should you give a colleague who only needs to read a report?',
+  o:['Deletes text permanently','Viewer access allows reading without editing','Locks the document','Converts the file to PDF'],a:1,
+  f:'Viewer access is appropriate when someone only needs to read the report.'},
+ {q:'Which message is best for a professional workplace update?',
+  o:['To edit text without anyone noticing','A clear message stating the update, action needed and deadline','To share the file','To change the font'],a:1,
+  f:'Clear, concise messages make responsibilities and next steps easier to understand.'},
+ {q:'What does cloud computing mean?',
+  o:['Spell check','Word count','Using internet-based services such as online storage and software','Print preview'],a:2,
+  f:'Using internet-based services such as online storage and software records changes over time and allows restoring.'},
+ {q:'You want a colleague to read but not change your document. Which permission should you give?',
+  o:['Editor','Commenter','Viewer','Owner'],a:2,
+  f:'Viewer allows reading only. Commenter allows comments but not editing.'},
+ {q:'A colleague has made a suggestion you disagree with. What should you do?',
+  o:['Delete their account','Reject it and, if needed, reply with a comment explaining why','Ignore all suggestions','Email a new version'],a:1,
+  f:'Rejecting with an explanation keeps the process transparent and respectful.'},
+ {q:'What is a good security practice when sharing a cloud file?',
+  o:['Attachments are always infected','Give each person only the access they need','Email cannot send files','It makes the file larger on the cloud'],a:1,
+  f:'Least-privilege access helps reduce accidental or unauthorised changes.'},
+ {q:'Which channel is usually suitable for a quick, non-sensitive team coordination question?',
+  o:['Delete the whole document','Work-approved team chat','Leave it open for ever','Turn off comments'],a:1,
+  f:'Use an approved team chat for quick coordination; use formal channels when a durable record is needed.'},
+ {q:'Which message is most useful when assigning a task?',
+  o:['final_final2_NEW.docx','Please send the revised report by 3 p.m. Thursday; reply here if blocked.','Document1.docx','Untitled'],a:1,
+  f:'A clear action and deadline help colleagues understand what is expected.'},
+ {q:'Which is a potential risk of cloud computing?',
+  o:['Giving each person the lowest permission they need','Sharing confidential files with unauthorised people','Checking who has access','Naming the file clearly'],a:1,
+  f:'Cloud services need careful access control and compliance with workplace security policies.'}];
+
+R.quiz=function(m){
+  m.appendChild(el('span','tag','Module quiz'));
+  m.appendChild(el('h2',null,'10 questions, instant feedback'));
+  m.appendChild(el('p','meta','Pass mark 70% · 2 attempts · questions and answers are shuffled · attempts used: '+S.attempts+' of 2'));
+  var host=el('div','box');m.appendChild(host);
+
+  function start(){
+    if(S.attempts>=2&&!(S.best>=7)){
+      host.innerHTML='<div class="fb no">You have used both attempts. Your best score is '+S.best+'/10. Contact the facilitator if you need help.</div>';
+      return;
+    }
+    host.innerHTML='';var inner=el('div');host.appendChild(inner);
+    quiz(inner,shuffle(QS),{done:function(s){
+      S.attempts++;S.best=Math.max(S.best||0,s);var pass=s>=7;
+      save();recordQuiz(s);syncLearner();
+      host.innerHTML='<h3>Your score: '+s+' / 10 ('+(s*10)+'%)</h3>'+
+        '<div class="fb '+(pass?'ok':'no')+'">'+
+        (pass?'<b>Passed.</b> Well done. Your attempt has been sent to the facilitator for review.'
+             :'<b>Not passed yet.</b> The pass mark is 70%. Review Lesson 2.2 and try again.')+'</div>';
+      var r=el('div','row');
+      if(!pass&&S.attempts<2){
+        var t=el('button','btn alt','Try again');t.type='button';
+        t.onclick=function(){m.innerHTML='';R.quiz(m)};r.appendChild(t);
+      }
+      if(pass){
+        finish('quiz');
+        var c=el('button','btn','Continue');c.type='button';
+        c.onclick=function(){go(6)};r.appendChild(c);
+      }
+      host.appendChild(r);drawNav();
+    }});
+  }
+  start();
+};
+
+/* ---------- wrap-up ---------- */
+R.wrap=function(m){
+  m.appendChild(el('span','tag','Wrap-up'));
+  m.appendChild(el('h2',null,'Reflect and plan'));
+  m.appendChild(el('div','facts','<div><b>'+(S.best==null?'–':S.best+'/10')+'</b><span>best quiz score</span></div>'+
+    '<div><b>'+Object.keys(S.done).length+' of 6</b><span>steps completed</span></div>'));
+
+  /* facilitator feedback pulled from the shared database */
+  var mine=DB.subs.filter(function(s){return s.u===CURUSER});
+  if(mine.length){
+    var fbBox=el('div','box');fbBox.appendChild(el('h3',null,'Feedback from your facilitator'));
+    mine.forEach(function(s){
+      var d=el('div','doc');
+      var status=s.status==='graded'
+        ? '<span class="pill g">Graded '+s.mark+'/100</span>'
+        : '<span class="pill">Waiting for grading</span>';
+      d.innerHTML='<b>'+esc(s.kind)+'</b> '+status+
+        '<div class="meta">Submitted '+esc(s.at)+'</div>'+
+        (s.fb?'<div>'+esc(s.fb)+'</div>':'');
+      fbBox.appendChild(d);
+    });
+    m.appendChild(fbBox);
+  }
+
+  var b=el('div','box');
+  var lbl=el('label');lbl.setAttribute('for','rf');
+  lbl.innerHTML='<b>What is one thing you will change about sharing, workplace communication or cloud security?</b>';
+  var ta=el('textarea');ta.id='rf';ta.rows=4;ta.value=S.reflection||'';
+  b.appendChild(lbl);b.appendChild(ta);
+  var sv=el('button','btn','Save reflection');sv.type='button';sv.style.justifySelf='start';
+  var ms=el('div','meta');
+  sv.onclick=function(){S.reflection=ta.value;finish('wrap');ms.textContent='Saved. Module complete.'};
+  b.appendChild(sv);b.appendChild(ms);m.appendChild(b);
+
+  m.appendChild(materialsBlock());
+  m.appendChild(el('div','box','<h3>Getting help</h3><table><tbody>'+
+    '<tr><td>Technical (login, downloads)</td><td>[WhatsApp number] · replies within 4 working hours</td></tr>'+
+    '<tr><td>Learning (content, tasks)</td><td>Forum or [facilitator email] · within 24 hours</td></tr>'+
+    '<tr><td>Admin (certificates, access)</td><td>[admin email] · within 2 working days</td></tr>'+
+    '<tr><td>Peer</td><td>Your group chat and the forum</td></tr></tbody></table>'));
+  m.appendChild(el('p','meta','Next topic: Effective online meetings and remote teamwork.'));
+};
+
+/* =============================================================
+   9. Lecturer console
+   ============================================================= */
+var LTAB='overview',EDITID=null,GFILTER='all';
+var LECR={};
+
+var LECTABS=[['overview','Overview'],['materials','Lesson materials'],
+             ['grading','Review & grade'],['progress','Learner progress']];
+
+function showLec(u){
+  CURUSER=u;PREVIEW=false;
+  $('#login').hidden=true;$('#app').hidden=true;$('#lec').hidden=false;
+  $('#lecwho').textContent='Signed in as '+ACCTS[u].name+' · Lecturer';
+  lecGo(LTAB);
+}
+
+function lecGo(tab){
+  LTAB=tab;drawLecNav();
+  var m=$('#lecmain');m.innerHTML='';LECR[tab](m);window.scrollTo(0,0);
+}
+
+function drawLecNav(){
+  var n=$('#lecnav');n.innerHTML='';
+  LECTABS.forEach(function(t){
+    var b=el('button',LTAB===t[0]?'on':'',esc(t[1]));
+    b.type='button';b.setAttribute('role','tab');
+    b.setAttribute('aria-selected',LTAB===t[0]?'true':'false');
+    b.onclick=function(){lecGo(t[0])};n.appendChild(b);
+  });
+}
+
+/* ---------- overview ---------- */
+LECR.overview=function(m){
+  var pend=DB.subs.filter(function(s){return s.status!=='graded'});
+  var pub=DB.materials.filter(function(x){return x.visible});
+
+  m.appendChild(el('h2',null,'Module overview: Digital collaboration at work'));
+  m.appendChild(el('p','meta','Prototype console. Everything shown here is stored in this browser only.'));
+  m.appendChild(el('div','facts',
+    '<div><b>'+DB.learners.length+'</b><span>learners enrolled</span></div>'+
+    '<div><b>'+DB.subs.length+'</b><span>submissions received</span></div>'+
+    '<div><b>'+pend.length+'</b><span>waiting to be graded</span></div>'+
+    '<div><b>'+pub.length+'</b><span>published materials</span></div>'));
+
+  var b1=el('div','box');
+  b1.appendChild(el('h3',null,'Needs your attention'));
+  if(!pend.length){
+    b1.appendChild(el('p','meta','Nothing waiting. All submissions are graded.'));
+  }else{
+    var t=el('div');t.style.display='grid';t.style.gap='8px';
+    pend.slice(0,5).forEach(function(s){
+      var r=el('div','post');
+      r.innerHTML='<b>'+esc(s.name)+'</b> <span class="pill">'+esc(s.kind)+'</span>'+
+        '<div class="meta">Submitted '+esc(s.at)+
+        (s.score!=null?' · auto score '+s.score+'/10':'')+'</div>';
+      t.appendChild(r);
+    });
+    b1.appendChild(t);
+    var gb=el('button','btn','Open grading queue');gb.type='button';
+    gb.onclick=function(){lecGo('grading')};b1.appendChild(gb);
+  }
+  m.appendChild(b1);
+
+  var b2=el('div','box');
+  b2.appendChild(el('h3',null,'Quick actions'));
+  var r2=el('div','row');
+  [['Upload lesson material','materials'],['Review submissions','grading'],['See learner progress','progress']]
+    .forEach(function(a){
+      var b=el('button','btn alt',a[0]);b.type='button';
+      b.onclick=function(){lecGo(a[1])};r2.appendChild(b);
+    });
+  b2.appendChild(r2);m.appendChild(b2);
+
+  var b3=el('div','box');
+  b3.appendChild(el('h3',null,'Recent submissions'));
+  if(!DB.subs.length){b3.appendChild(el('p','meta','No submissions yet.'))}
+  else{
+    var tb=el('table');
+    tb.innerHTML='<thead><tr><th>Learner</th><th>Type</th><th>When</th><th>Status</th></tr></thead>';
+    var body=el('tbody');
+    DB.subs.slice().reverse().slice(0,6).forEach(function(s){
+      var tr=el('tr');
+      tr.innerHTML='<td>'+esc(s.name)+'</td><td>'+esc(s.kind)+'</td><td>'+esc(s.at)+'</td>'+
+        '<td><span class="pill '+(s.status==='graded'?'g':'')+'">'+
+        (s.status==='graded'?'Graded '+(s.mark==null?'':'('+s.mark+')'):'Needs grading')+'</span></td>';
+      body.appendChild(tr);
+    });
+    tb.appendChild(body);b3.appendChild(tb);
+  }
+  m.appendChild(b3);
+};
+
+/* ---------- materials ---------- */
+LECR.materials=function(m){
+  m.appendChild(el('h2',null,'Lesson materials'));
+  m.appendChild(el('p','meta','Anything you publish here appears immediately in the learner\'s Welcome and Wrap-up steps. This prototype records an attached file by name only; a live system would store the file itself on the server.'));
+
+  var edit=EDITID?DB.materials.filter(function(x){return x.id===EDITID})[0]:null;
+
+  var f=el('div','box');
+  f.appendChild(el('h3',null,edit?'Edit material':'Add material'));
+
+  function field(label,ctrl){
+    var w=el('div');w.style.display='grid';w.style.gap='4px';
+    var l=el('label');l.innerHTML='<b>'+esc(label)+'</b>';
+    if(ctrl.id)l.setAttribute('for',ctrl.id);
+    w.appendChild(l);w.appendChild(ctrl);f.appendChild(w);
+  }
+
+  var title=el('input');title.type='text';title.id='mtitle';
+  title.placeholder='e.g. Week 2 job aid (one page)';
+  title.value=edit?edit.title:'';
+
+  var type=el('select');type.id='mtype';
+  ['Reading','Video','Slides','PDF','Link','Template','Audio'].forEach(function(o){
+    var op=el('option',null,esc(o));op.value=o;type.appendChild(op);
+  });
+  type.value=edit?edit.type:'Reading';
+
+  var url=el('input');url.type='url';url.id='murl';
+  url.placeholder='https://…';url.value=edit?edit.url:'';
+
+  var note=el('textarea');note.id='mnote';note.rows=2;
+  note.placeholder='One line telling learners what it is for';
+  note.value=edit?edit.note:'';
+
+  var file=el('input');file.type='file';file.id='mfile';
+
+  var vis=el('input');vis.type='checkbox';vis.id='mvis';vis.checked=edit?edit.visible:true;
+  var vlab=el('label','chk');vlab.appendChild(vis);
+  vlab.appendChild(el('span',null,'Publish to learners now'));
+
+  field('Title',title);field('Type',type);field('Link (optional)',url);
+  field('Description',note);field('Attach a file (optional)',file);
+  f.appendChild(vlab);
+
+  var msg=el('div','meta');
+  var row=el('div','row');
+  var sb=el('button','btn',edit?'Save changes':'Add material');sb.type='button';
+  sb.onclick=function(){
+    var t=title.value.trim();
+    if(!t){msg.textContent='A title is needed.';title.focus();return}
+    var fn=(file.files&&file.files[0])?file.files[0].name:'';
+    if(edit){
+      edit.title=t;edit.type=type.value;edit.url=url.value.trim();
+      edit.note=note.value.trim();edit.visible=vis.checked;
+      if(fn)edit.file=fn;
+      EDITID=null;saveDB();lecGo('materials');
+    }else{
+      DB.materials.unshift({id:uid(),title:t,type:type.value,url:url.value.trim(),
+        note:note.value.trim(),file:fn,visible:vis.checked,added:today()});
+      saveDB();lecGo('materials');
+    }
+  };
+  row.appendChild(sb);
+  if(edit){
+    var cb=el('button','btn alt','Cancel');cb.type='button';
+    cb.onclick=function(){EDITID=null;lecGo('materials')};row.appendChild(cb);
+  }
+  f.appendChild(row);f.appendChild(msg);
+  m.appendChild(f);
+
+  /* list */
+  var list=el('div','box');
+  list.appendChild(el('h3',null,'Materials ('+DB.materials.length+')'));
+  if(!DB.materials.length)list.appendChild(el('p','meta','Nothing yet. Add your first material above.'));
+  DB.materials.forEach(function(mm){
+    var card=el('div','post');
+    var head=el('div','row');head.style.justifyContent='space-between';
+    head.innerHTML='<b>'+esc(mm.title)+'</b>';
+    head.appendChild(el('span','pill '+(mm.visible?'g':'b'),mm.visible?'Published':'Hidden'));
+    card.appendChild(head);
+
+    var bits=[mm.type];
+    if(mm.url)bits.push(mm.url);
+    if(mm.file)bits.push('file: '+mm.file);
+    if(mm.added)bits.push('added '+mm.added);
+    card.appendChild(el('div','meta',esc(bits.join(' · '))));
+    if(mm.note)card.appendChild(el('div','meta',esc(mm.note)));
+
+    var acts=el('div','row');
+    var e1=el('button','btn alt','Edit');e1.type='button';e1.style.padding='2px 10px';
+    e1.onclick=function(){EDITID=mm.id;lecGo('materials')};
+    var e2=el('button','btn alt',mm.visible?'Hide':'Publish');e2.type='button';e2.style.padding='2px 10px';
+    e2.onclick=function(){mm.visible=!mm.visible;saveDB();lecGo('materials')};
+    var e3=el('button','btn alt','Delete');e3.type='button';e3.style.padding='2px 10px';
+    e3.onclick=function(){
+      if(!confirm('Delete "'+mm.title+'"?'))return;
+      DB.materials=DB.materials.filter(function(x){return x.id!==mm.id});
+      saveDB();lecGo('materials');
+    };
+    acts.appendChild(e1);acts.appendChild(e2);acts.appendChild(e3);
+    card.appendChild(acts);
+    list.appendChild(card);
+  });
+  m.appendChild(list);
+};
+
+/* ---------- grading ---------- */
+function gradeCard(s){
+  var c=el('div','box');
+
+  var head=el('div','row');head.style.justifyContent='space-between';
+  head.innerHTML='<b>'+esc(s.name)+'</b>';
+  head.appendChild(el('span','pill '+(s.status==='graded'?'g':'b'),
+    s.status==='graded'?'Graded':'Needs grading'));
+  c.appendChild(head);
+
+  c.appendChild(el('div','meta',esc(s.kind)+' · submitted '+esc(s.at)+
+    (s.score!=null?' · auto score '+s.score+'/10 ('+(s.score*10)+'%)':'')));
+
+  if(s.link){
+    var a=el('div','meta');
+    a.innerHTML='<a href="'+esc(s.link)+'" target="_blank" rel="noopener">Open submitted document</a>';
+    c.appendChild(a);
+  }
+
+  var g=el('div');g.style.display='grid';g.style.gap='8px';
+
+  var mk=el('input');mk.type='number';mk.min='0';mk.max='100';mk.id='mk_'+s.id;
+  mk.placeholder='Mark out of 100';mk.value=(s.mark==null?'':s.mark);
+
+  var fb=el('textarea');fb.rows=2;fb.id='fb_'+s.id;
+  fb.placeholder='Feedback for the learner';fb.value=s.fb||'';
+
+  var l1=el('label');l1.setAttribute('for',mk.id);l1.innerHTML='<b>Mark (0–100)</b>';
+  var l2=el('label');l2.setAttribute('for',fb.id);l2.innerHTML='<b>Feedback</b>';
+
+  g.appendChild(l1);g.appendChild(mk);g.appendChild(l2);g.appendChild(fb);
+
+  var row=el('div','row');
+  var msg=el('span','meta');
+  var sv=el('button','btn','Save grade');sv.type='button';
+  sv.onclick=function(){
+    var v=mk.value.trim();
+    if(v===''||isNaN(+v)||+v<0||+v>100){msg.textContent='Enter a mark between 0 and 100.';return}
+    s.mark=Math.round(+v);s.fb=fb.value.trim();s.status='graded';s.gradedAt=nowStr();
+    saveDB();lecGo('grading');
+  };
+  row.appendChild(sv);
+
+  if(s.status==='graded'){
+    var rp=el('button','btn alt','Reopen');rp.type='button';
+    rp.onclick=function(){s.status='pending';saveDB();lecGo('grading')};row.appendChild(rp);
+  }
+  row.appendChild(msg);
+  g.appendChild(row);
+  c.appendChild(g);
+  return c;
+}
+
+LECR.grading=function(m){
+  m.appendChild(el('h2',null,'Review and grade'));
+  m.appendChild(el('p','meta','Quiz attempts are scored automatically; your mark and feedback confirm or override them. Group task links need a mark from you. Learners see your feedback in the Wrap-up step.'));
+
+  var bar=el('div','row');
+  [['all','All'],['pending','Needs grading'],['graded','Graded']].forEach(function(f){
+    var b=el('button','btn'+(GFILTER===f[0]?'':' alt'),f[1]);b.type='button';
+    b.onclick=function(){GFILTER=f[0];lecGo('grading')};bar.appendChild(b);
+  });
+  m.appendChild(bar);
+
+  var list=DB.subs.filter(function(s){
+    if(GFILTER==='all')return true;
+    if(GFILTER==='graded')return s.status==='graded';
+    return s.status!=='graded';
+  });
+
+  if(!list.length){
+    m.appendChild(el('div','note','No submissions in this view.'));
+    return;
+  }
+  list.forEach(function(s){m.appendChild(gradeCard(s))});
+};
+
+/* ---------- progress ---------- */
+LECR.progress=function(m){
+  m.appendChild(el('h2',null,'Learner progress'));
+  m.appendChild(el('p','meta','Progress is read from each learner\'s saved module state on this browser. Demo learners show sample data.'));
+
+  var w=el('div','scroll');
+  var t=el('table');
+  t.innerHTML='<thead><tr><th>Learner</th><th>Steps done</th><th>Quiz best</th><th>Attempts</th><th>Submissions</th><th>Latest mark</th></tr></thead>';
+  var body=el('tbody');
+  DB.learners.forEach(function(l){
+    var subs=DB.subs.filter(function(s){return s.u===l.u});
+    var graded=subs.filter(function(s){return s.status==='graded'});
+    var last=graded.length?graded[graded.length-1].mark:null;
+    var tr=el('tr');
+    tr.innerHTML='<td><b>'+esc(l.name)+'</b><div class="meta">'+esc(l.u)+'</div></td>'+
+      '<td>'+l.progress+' / '+STEPS.length+'</td>'+
+      '<td>'+(l.best==null?'–':l.best+'/10')+'</td>'+
+      '<td>'+l.attempts+' / 2</td>'+
+      '<td>'+subs.length+'</td>'+
+      '<td>'+(last==null?'–':last+'/100')+'</td>';
+    body.appendChild(tr);
+  });
+  t.appendChild(body);w.appendChild(t);m.appendChild(w);
+
+  var r=el('div','row');
+  var rb=el('button','btn alt','Reset prototype data');rb.type='button';
+  rb.onclick=function(){
+    if(!confirm('Reset all prototype data (materials, submissions, learner records)?'))return;
+    DB=newDB();saveDB();lecGo('progress');
+  };
+  r.appendChild(rb);m.appendChild(r);
+
+  var b=el('div','box');
+  b.innerHTML='<h3>Grading summary</h3><table><tbody>'+
+    '<tr><td>Submissions received</td><td>'+DB.subs.length+'</td></tr>'+
+    '<tr><td>Graded</td><td>'+DB.subs.filter(function(s){return s.status==='graded'}).length+'</td></tr>'+
+    '<tr><td>Awaiting a mark</td><td>'+DB.subs.filter(function(s){return s.status!=='graded'}).length+'</td></tr>'+
+    '</tbody></table>';
+  m.appendChild(b);
+};
+
+/* =============================================================
+   10. Authentication and routing
+   ============================================================= */
+$('#lf').onsubmit=function(ev){
+  ev.preventDefault();
+  var u=$('#u').value.trim().toLowerCase();
+  var p=$('#p').value;
+  var er=$('#lerr');
+  var acct=ACCTS[u];
+  if(acct&&acct.pw===p){
+    er.hidden=true;
+    try{sessionStorage.setItem('mod2user',u)}catch(e){}
+    if(acct.role==='lecturer')showLec(u);else showApp(u,false);
+  }else{
+    er.hidden=false;
+    er.textContent='The username or password is not correct. Check both and try again.';
+  }
+};
+
+/* learner sign-out / preview return */
+$('#out').onclick=function(){
+  if(PREVIEW){PREVIEW=false;showLec('lecturer');return}
+  try{sessionStorage.removeItem('mod2user')}catch(e){}
+  $('#app').hidden=true;$('#login').hidden=false;
+  $('#p').value='';$('#u').focus();
+};
+
+/* lecturer sign-out */
+$('#lecout').onclick=function(){
+  try{sessionStorage.removeItem('mod2user')}catch(e){}
+  PREVIEW=false;
+  $('#lec').hidden=true;$('#app').hidden=true;$('#login').hidden=false;
+  $('#p').value='';$('#u').focus();
+};
+
+/* lecturer preview of the learner module */
+$('#lecpreview').onclick=function(){
+  showApp('lecturer',true);
+};
+
+/* restore an existing session */
+var me=null;
+try{me=sessionStorage.getItem('mod2user')}catch(e){}
+if(me&&ACCTS[me]){
+  if(ACCTS[me].role==='lecturer')showLec(me);else showApp(me,false);
+}
+})();
+</script>
+
+</body></html>
